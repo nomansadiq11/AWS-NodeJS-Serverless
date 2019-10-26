@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= title
+    table.table.table-striped.table-bordered.table-hover.table-condensed
+        thead
+            tr
+            th row Number
+            th file row
+        tbody
+            each val, key in result
+                tr
+                td= key
+                td= val
+                

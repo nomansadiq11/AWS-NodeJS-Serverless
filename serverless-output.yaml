@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  CsvReader:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: nodejs10.x
+      Handler: handler.hello
+      CodeUri: s3://readcsvfile/79b5602a1995920aadaa40693e560452
+      Policies: OnlyFileReadCsv
+      Events:
+        MyApiRequest:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get

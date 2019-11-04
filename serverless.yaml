@@ -8,6 +8,7 @@ Resources:
       Handler: 'handler.hello'
       CodeUri: './csvreader-api/handler.js'
       Role: 'arn:aws:iam::889053467641:role/csvfilereaderofficeRole'
+      Policies: 'OnlyFileReadCsvRole'
       Events:
         MyApiRequest:
           Type: Api

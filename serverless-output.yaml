@@ -6,8 +6,8 @@ Resources:
     Properties:
       Runtime: nodejs10.x
       Handler: handler.hello
-      CodeUri: s3://readcsvfile/79b5602a1995920aadaa40693e560452
-      Policies: OnlyFileReadCsv
+      CodeUri: s3://csvfilereaderoffice/59761da16e465986970e165320d93f20
+      Role: arn:aws:iam::889053467641:role/csvfilereaderofficeRole
       Events:
         MyApiRequest:
           Type: Api

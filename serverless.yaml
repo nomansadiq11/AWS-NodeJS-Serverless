@@ -7,7 +7,7 @@ Resources:
       Runtime: 'nodejs10.x'
       Handler: 'handler.hello'
       CodeUri: './csvreader-api/handler.js'
-      Policies: 'OnlyFileReadCsv'
+      Role: 'arn:aws:iam::889053467641:role/csvfilereaderofficeRole'
       Events:
         MyApiRequest:
           Type: Api
